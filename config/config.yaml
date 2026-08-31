@@ -1,0 +1,28 @@
+gateway:
+  host: "127.0.0.1"
+  port: 8443
+
+backend:
+  host: "127.0.0.1"
+  port: 8080
+
+detection:
+  anomaly_threshold: 0.6
+  rule_threshold: 0.5
+  behavior_threshold: 0.7
+  combined_threshold: 0.6
+
+enforcement:
+  block_threshold: 0.8
+  flag_threshold: 0.5
+  allow_threshold: 0.3
+
+logging:
+  database: "data/sova_waf.db"
+  request_log: true
+  security_events: true
+
+training:
+  contamination: 0.1
+  n_estimators: 100
+  random_state: 42
